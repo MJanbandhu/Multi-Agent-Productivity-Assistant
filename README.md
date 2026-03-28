@@ -1,4 +1,12 @@
-# System Architecture Overview
+# Multi-Agent AI Orchestrator for Productivity assistant Tools
+
+## Overview
+A multi-agent AI system that helps users manage tasks, schedules, and information by coordinating with multiple tools and data sources. This system demonstrates AI-driven workflow execution, tool integration, and data management.
+
+
+
+
+## System Architecture Overview
 ### Main Components
 #### Primary Agent (Coordinator)
 - Built using ADK + Gemini
