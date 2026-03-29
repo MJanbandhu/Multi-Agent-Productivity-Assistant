@@ -1,4 +1,4 @@
-from db.queries import execute_query
+from app.db.queries import execute_query
 
 def create_task(title):
     query = "INSERT INTO tasks (title, status) VALUES (%s, 'pending');"
@@ -8,3 +8,10 @@ def create_task(title):
 def get_tasks():
     query = "SELECT * FROM tasks;"
     return execute_query(query)
+
+
+def create_task(title):
+    return "Task created (mock)"
+
+def get_tasks():
+    return []   

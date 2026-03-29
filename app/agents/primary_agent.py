@@ -1,29 +1,24 @@
-from agents.task_agent import handle_task
-from agents.calendar_agent import handle_calendar
-from agents.notes_agent import handle_notes
+from app.agents.task_agent import task_agent
+from app.agents.calendar_agent import calendar_agent
+from app.agents.notes_agent import notes_agent
 
 def primary_agent(query):
     query = query.lower()
     
     responses = []
-
-    # Multi-step splitting (basic)
     parts = query.split(" and ")
 
     for part in parts:
         part = part.strip()
 
-        # Route to Task Agent
         if "task" in part:
-            responses.append(handle_task(part))
+            responses.append(task_agent(part))
 
-        # Route to Calendar Agent
         elif "schedule" in part or "event" in part:
-            responses.append(handle_calendar(part))
+            responses.append(calendar_agent(part))
 
-        # Route to Notes Agent
         elif "note" in part:
-            responses.append(handle_notes(part))
+            responses.append(notes_agent(part))
 
         else:
             responses.append(f"Unknown request: {part}")

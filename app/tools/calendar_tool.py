@@ -1,10 +1,16 @@
-from db.queries import execute_query
+from app.db.queries import execute_query
 
-def create_event(title, time):
+def create_event(title, event_time):
     query = "INSERT INTO events (title, event_time) VALUES (%s, %s);"
-    execute_query(query, (title, time))
-    return "Event scheduled"
+    execute_query(query, (title, event_time))
+    return "Event created successfully"
 
 def get_events():
     query = "SELECT * FROM events;"
     return execute_query(query)
+
+def create_events(title):
+    return "Events created (mock)"
+
+def get_events():
+    return []

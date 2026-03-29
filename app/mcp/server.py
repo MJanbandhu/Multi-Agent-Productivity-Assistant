@@ -1,6 +1,15 @@
-from mcp.tool_registry import TOOLS
+from app.mcp.tool_registry import TOOLS
 
-def call_tool(tool_name, *args):
-    if tool_name in TOOLS:
-        return TOOLS[tool_name](*args)
-    return "Tool not found"
+
+def call_tool(tool_name, data):
+    if tool_name == "task":
+        return {"message": f"Task tool executed with {data}"}
+    
+    elif tool_name == "calendar":
+        return {"message": f"Calendar tool executed with {data}"}
+    
+    elif tool_name == "notes":
+        return {"message": f"Notes tool executed with {data}"}
+    
+    else:
+        return {"error": "Unknown tool"}
