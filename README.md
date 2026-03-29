@@ -157,12 +157,12 @@ app/
 
 Future Improvements
 
-LLM-based intent detection (replace keyword-based routing)
-User authentication and session handling
-Frontend interface (React or Streamlit)
-Advanced scheduling and parsing logic
-Async database operations
-Logging and monitoring
+- LLM-based intent detection (replace keyword-based routing)
+- User authentication and session handling
+- Frontend interface (React or Streamlit)
+- Advanced scheduling and parsing logic
+- Async database operations
+- Logging and monitoring
 
 
 
