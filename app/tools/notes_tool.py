@@ -8,11 +8,3 @@ def create_note(content):
 def get_notes():
     query = "SELECT * FROM notes;"
     return execute_query(query)
-
-
-
-def create_notes(title):
-    return "Notes created (mock)"
-
-def get_notes():
-    return []

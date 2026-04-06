@@ -5,7 +5,7 @@ from app.tools.calendar_tool import create_event, get_events
 TOOLS = {
     "create_task": create_task,
     "get_tasks": get_tasks,
-    "create_note": create_note,
+    "add_note": create_note,
     "get_notes": get_notes,
     "create_event": create_event,
     "get_events": get_events,

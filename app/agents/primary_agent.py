@@ -1,6 +1,6 @@
 from app.agents.task_agent import task_agent
 from app.agents.calendar_agent import calendar_agent
-from app.agents.notes_agent import notes_agent
+from app.agents.notes_agent import handle_notes
 
 def primary_agent(query):
     query = query.lower()
@@ -18,7 +18,7 @@ def primary_agent(query):
             responses.append(calendar_agent(part))
 
         elif "note" in part:
-            responses.append(notes_agent(part))
+            responses.append(handle_notes(part))
 
         else:
             responses.append(f"Unknown request: {part}")
